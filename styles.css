@@ -1,0 +1,133 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SUSE', sans-serif;
+}
+
+:root{
+    --bg-color: #D9DBE3; 
+    --bg-container: #fff;
+    --color-primary: #003399;
+    --color-secundary: #F61067;
+}
+
+button{
+    cursor: pointer;
+    font: inherit;
+}
+
+button:focus{
+    outline: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100dvh;
+    background-color: var(--bg-color);
+    line-height: 1.5;
+}
+
+.container{
+    background-color: var(--bg-container);
+    width: 95%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+}
+
+.input__container{
+    position: relative;
+}
+.input__container input{
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    border: 2px solid black
+}
+
+.input__icon{
+    width: 25px;
+    position: absolute;
+    bottom: 50%;
+    right: 10px;
+    cursor: pointer;
+    transition: opacity 0.4s;
+}
+
+.input__icon:hover{
+    opacity: .7;
+}
+
+.mont_selector{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-container);
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius:12px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    
+}
+
+.material-symbols-outlined{
+    transition: color .4s;
+    font-size: 2rem!important;
+    
+}
+.material-symbols-outlined:hover{
+    color: var(--color-primary);
+}
+
+.month{
+    font-weight: 600;
+}
+
+.datepicker__calendar{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 1rem;
+}
+
+.day{
+    justify-self: center;
+    font-weight: 500;
+}
+
+.date{
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: all .4s;
+}
+
+.date:hover{
+    opacity: .7;
+}
+
+.date:focus{
+    outline: none;
+    color: var(--bg-container);
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-primary);
+}
+
+.current{
+    color: var(--bg-container);
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+}
